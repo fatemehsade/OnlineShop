@@ -11,4 +11,16 @@
         android:name="com.example.onlineshop.view.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.onlineshop.view.CartFragment"
+        android:label="CartFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.onlineshop.view.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.onlineshop.view.FavoriteFragment"
+        android:label="FavoriteFragment" />
 </navigation>
