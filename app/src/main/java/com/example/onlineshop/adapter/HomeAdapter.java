@@ -42,7 +42,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
         AllProduct product=mAllProductList.get(position);
         holder.mBinding.txtTitleProduct.setText(product.getTitle());
         holder.mBinding.txtDescriptionProduct.setText(product.getDescription());
-        holder.mBinding.txtPriceProduct.setText((int) product.getPrice());
+        String price="price : "+product.getPrice();
+        holder.mBinding.txtPriceProduct.setText(price);
         Glide.with(mContext).load(product.getUrlImage()).into(holder.mBinding.imgProduct);
 
     }

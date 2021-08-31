@@ -7,86 +7,84 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl">
 
 
         <ImageView
             android:id="@+id/img_product"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/txt_title_product"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="4dp"
+            android:layout_margin="4dp"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/txt_title_product"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="195dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="14dp"
-            android:layout_marginBottom="16dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toLeftOf="@id/img_product"
+            android:padding="4dp"
             android:text="TextView"
-            app:layout_constraintBottom_toTopOf="@+id/txt_description_product"
-            app:layout_constraintEnd_toStartOf="@+id/img_product"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/txt_description_product"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="195dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="14dp"
-            android:text="TextView"
-            app:layout_constraintEnd_toStartOf="@+id/img_product"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_title_product" />
+            android:layout_below="@id/txt_title_product"
+            android:layout_alignParentLeft="true"
+            android:textSize="10dp"
+            android:layout_margin="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toLeftOf="@id/img_product"
+            android:padding="4dp"
+            android:text="TextView" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/txt_price_product"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="96dp"
-            android:layout_marginBottom="10dp"
+            android:layout_below="@id/txt_description_product"
+            android:layout_toLeftOf="@id/img_product"
             android:text="TextView"
-            app:layout_constraintBottom_toTopOf="@+id/button3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_margin="4dp"/>
 
         <ImageButton
-            android:id="@+id/button3"
+            android:id="@+id/btn_add"
             android:layout_width="28dp"
             android:layout_height="28dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="10dp"
+            android:layout_below="@id/txt_description_product"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="bottom"
             android:background="@drawable/ic_minuse"
-            android:backgroundTint="#970536"
-            app:layout_constraintBottom_toBottomOf="@+id/img_product"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            android:layout_margin="4dp"
+            android:backgroundTint="#970536" />
 
         <ImageButton
-            android:id="@+id/button4"
+            android:id="@+id/btn_remove"
             android:layout_width="28dp"
             android:layout_height="28dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="186dp"
+            android:layout_below="@id/txt_description_product"
+            android:layout_toRightOf="@id/btn_add"
             android:background="@drawable/ic_add"
-            android:backgroundTint="#065E09"
-            app:layout_constraintEnd_toStartOf="@+id/img_product"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/button3"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_margin="4dp"
+            android:backgroundTint="#065E09" />
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 </layout>
